@@ -8,16 +8,36 @@
   <style>
     body {
       padding-top: 60px;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      min-height: 100vh;
+    }
+    .blurred-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: inherit;
+      background-size: inherit;
+      background-position: inherit;
+      background-repeat: inherit;
+      filter: blur(10px);
+      z-index: -1;
     }
     .photo {
-      width: 150px; /* Set width */
-      height: 150px; /* Set height to match the width */
-      border-radius: 50%; /* Make the image circular */
-      object-fit: cover; /* Ensure the image doesn't stretch or distort */
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
     }
   </style>
 </head>
 <body>
+  <div class="blurred-background"></div>
   <div class="container text-center">
     <img src="my-photo.jpg" alt="My Photo" class="photo mb-3" />
     <h1>Mary Gillian C. Marfil</h1>
